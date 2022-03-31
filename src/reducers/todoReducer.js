@@ -20,6 +20,13 @@ const todoReducers = (state = initialData, action) => {
                 ]
             }
 
+        case 'DELETE_TODO':
+
+            return {
+                ...state,
+                list: state.list.filter(elem => elem.id !== action.id)
+            }
+
         default: return state;
     }
 }

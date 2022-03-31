@@ -31,7 +31,7 @@ const Todo = () => {
                                     <div className="eachItem" key={elem.id}>
                                         <h3>{elem.data}</h3>
                                         <div className='todo-btn'>
-                                            <i className='far fa-trash add-btn' title='Delete Item' onClick={() => dispatch(deleteTodo(inputData))}></i>
+                                            <i className='far fa-trash add-btn' title='Delete Item' onClick={() => dispatch(deleteTodo(elem.id))}></i>
                                         </div>
                                     </div>
                                 )
