@@ -38,9 +38,9 @@ const Todo = () => {
                             })
                         }
                     </div>
-                </div>
-                <div className='todo-btn'>
-                    <i className='far fa-trash add-btn' title='DeleteAll' onClick={() => dispatch(removeAllTodo())}>Remove All</i>
+                    <div className='showItems'>
+                        <i className='btn effect04' title='RemoveAll' onClick={() => dispatch(removeAllTodo())}>Remove All</i>
+                    </div>
                 </div>
             </div>
         </>
