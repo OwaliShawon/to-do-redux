@@ -8,6 +8,12 @@ const Todo = () => {
     const dispatch = useDispatch();
     // console.log(inputData);
     // console.log(list);
+    function _handleKeyDown(e) {
+        if (e.key === 'Enter') {
+            // console.log('do validate');
+            dispatch(addTodo(inputData), setInputData(''));
+        }
+    }
     return (
         <>
             <div className='main-div'>
@@ -21,7 +27,8 @@ const Todo = () => {
                             type='text'
                             placeholder='Add Your List Here !'
                             value={inputData}
-                            onChange={(event) => setInputData(event.target.value)} />
+                            onChange={(event) => setInputData(event.target.value)}
+                            onKeyDown={_handleKeyDown} />
                         <i className='fa fa-plus add-btn' onClick={() => dispatch(addTodo(inputData), setInputData(''))}></i>
                     </div>
                     <div className="showItems">
