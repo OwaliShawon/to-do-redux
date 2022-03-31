@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodo, deleteTodo } from './../actions/index';
+import { addTodo, deleteTodo, removeAllTodo } from './../actions/index';
 import "./Todo.css";
 const Todo = () => {
     const [inputData, setInputData] = useState("");
@@ -38,6 +38,9 @@ const Todo = () => {
                             })
                         }
                     </div>
+                </div>
+                <div className='todo-btn'>
+                    <i className='far fa-trash add-btn' title='DeleteAll' onClick={() => dispatch(removeAllTodo())}>Remove All</i>
                 </div>
             </div>
         </>

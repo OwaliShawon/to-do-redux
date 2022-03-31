@@ -18,6 +18,5 @@ export const deleteTodo = (id) => {
 export const removeAllTodo = () => {
     return {
         type: 'REMOVE_ALL_TODO',
-
     }
 }
